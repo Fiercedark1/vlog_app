@@ -21,7 +21,7 @@ Things you may want to cover:
 - <tt>bundle exec unicorn</tt>
 - visit localhost:8080 in your browser of choice and there you have it.
 - To change images go to <tt>/app/assets/images/</tt> and just rename your png image to avatar.png
-- Changes the twitter feed can be done by removing lines 7 - 11 at <tt>/app/views/pages/about.html.erb</tt> also you can go to your twitter and insert your own feed in its place
+- Changing the twitter feed can be done by removing lines 7 - 11 at <tt>/app/views/pages/about.html.erb</tt> also you can go to your twitter and insert your own feed in its place
 - Don't forget to change the details on lines 21 - 26 to be about you or what ever you'd like.
 - To change where the google map loads to change the lat: and lng: on line 19 at <tt>/app/views/pages/contact.html.erb</tt>
 - Finally I would review the first video on the site "Using Youtube iframes" and if you want to dynamically use something else look at <tt>/app/views/videos/show.html.erb</tt> line 14 <tt>@video.wistia</tt> is your variable that represents the link from where ever your videos reside

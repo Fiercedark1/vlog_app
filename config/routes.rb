@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
   root 'videos#index'
-  
-  devise_for :users do
-    delete 'logout' => 'sessions#destroy', :as => :destroy_user_session
-    get 'login' => 'devise/sessions#new'
-  end
+  ActiveAdmin.routes(self)
+  devise_for :users
   resources :videos
   resources :posts do
     resources :comments

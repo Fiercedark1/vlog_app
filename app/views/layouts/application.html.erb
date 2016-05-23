@@ -24,13 +24,20 @@
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="<%= root_path %>"><i class="small material-icons">view_list</i></a></li>
-          <li><a href="<%= posts_path %>"><i class="small material-icons ">view_list</i></a></li>
+          <li><a href="<%= root_path %>"><i class="small material-icons">video_library</i></a></li>
+          <li><a href="<%= posts_path %>"><i class="small material-icons ">library_books</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
+          <div class="row">
+          <div class="col m6 m4"><li><a href="#"><h6>Login</h6></a></li></div>
+          <div class="col m6 m4"><li><a href="#"><h6>Logout</h6></a></li></div>
+        </div>
         </ul>
       </div>
     </nav>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+    <% end %>
 <div class="row">
   <div class="col m10 offset-m1">
 <%= yield %>

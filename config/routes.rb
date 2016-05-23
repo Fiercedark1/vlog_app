@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-
-  root 'videos#index'
   ActiveAdmin.routes(self)
+  root 'videos#index'
   devise_for :users
   resources :videos
   resources :posts do

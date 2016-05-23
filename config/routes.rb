@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users do
     delete 'logout' => 'sessions#destroy', :as => :destroy_user_session
     get 'login' => 'devise/sessions#new'
+  end 
   resources :videos
   resources :posts do
     resources :comments

@@ -29,8 +29,14 @@
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
           <div class="row">
+            <% if !user_signed_in? %>
           <div class="col m6 m4"><li><a href="#"><h6>Login</h6></a></li></div>
+            <% end %>
+          </div>
+          <div class="row">
+          <% if user_signed_in? %>
           <div class="col m6 m4"><li><a href="#"><h6>Logout</h6></a></li></div>
+          <% end %>
         </div>
         </ul>
       </div>

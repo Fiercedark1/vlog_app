@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Blog</h1>
-
+<% if user_signed_in? %>
 <%= link_to new_post_path, :class => 'btn-floating btn-large waves-effect waves-light blue' do %>
   <i class="material-icons">add</i>
     <% end %>
+<% end %>
 
 <ul class="collapsible" data-collapsible="accordion">
 <% @posts.each do |post| %>

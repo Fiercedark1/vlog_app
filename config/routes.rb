@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
+  root 'videos#index'
+  
   devise_for :users do
     delete 'logout' => 'sessions#destroy', :as => :destroy_user_session
     get 'login' => 'devise/sessions#new'
-  end 
+  end
   resources :videos
   resources :posts do
     resources :comments
@@ -13,6 +16,4 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'posts/index' => 'posts#index'
-
-  root 'videos#index'
 end

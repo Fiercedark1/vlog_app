@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :videos, :posts
+  resources :videos
+  resources :posts do
+    resources :comments
+  end
   get 'pages/about'
 
   get 'pages/contact'

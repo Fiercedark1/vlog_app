@@ -22,22 +22,29 @@
           <li><a href="<%= posts_path %>"><i class="small material-icons ">library_books</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
+          <% if user_signed_in? %>
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <li><%= link_to('Account', edit_user_registration_path) %></li>
+          <% end %>
+            <% if !user_signed_in? %>
+          <li><%= link_to('Login', new_user_session_path)  %></li>
+          <li><%= link_to('Signup', new_user_registration_path) %></li>
+            <% end %>
+          </div>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="<%= root_path %>"><i class="small material-icons">video_library</i></a></li>
           <li><a href="<%= posts_path %>"><i class="small material-icons ">library_books</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
-          <div class="row">
-            <% if !user_signed_in? %>
-          <div class="col m6"><li><h6><%= link_to('Login/Signup', new_user_session_path)  %></h6></a></li></div>
-            <% end %>
-          </div>
-          <div class="row">
           <% if user_signed_in? %>
-          <div class="col m6 m4"><li><h6><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h6></li></div>
-          <div class="col m6 m4"><li><h6><%= link_to('Account', edit_user_registration_path) %></h6></li></div>
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <li><%= link_to('Account', edit_user_registration_path) %></li>
           <% end %>
+            <% if !user_signed_in? %>
+          <li><%= link_to('Login', new_user_session_path)  %></li>
+          <li><%= link_to('Signup', new_user_registration_path) %></li>
+            <% end %>
         </div>
         </ul>
       </div>

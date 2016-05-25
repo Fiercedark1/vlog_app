@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self)
+
   root 'videos#index'
+
   devise_for :users
   resources :videos
   resources :posts do
@@ -11,5 +12,7 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
-  get 'posts/index' => 'posts#index'
+  get 'videos/index' => 'videos/#index'
+
+  #get 'posts/index' => 'posts#index'
 end

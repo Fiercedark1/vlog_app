@@ -30,12 +30,13 @@
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
           <div class="row">
             <% if !user_signed_in? %>
-          <div class="col m6 m4"><li><a href="#"><h6>Login</h6></a></li></div>
+          <div class="col m6"><li><h6><%= link_to('Login/Signup', new_user_session_path)  %></h6></a></li></div>
             <% end %>
           </div>
           <div class="row">
           <% if user_signed_in? %>
-          <div class="col m6 m4"><li><a href="#"><h6>Logout</h6></a></li></div>
+          <div class="col m6 m4"><li><h6><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h6></li></div>
+          <div class="col m6 m4"><li><h6><%= link_to('Account', edit_user_registration_path) %></h6></li></div>
           <% end %>
         </div>
         </ul>

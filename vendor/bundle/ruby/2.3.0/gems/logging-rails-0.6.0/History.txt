@@ -1,0 +1,27 @@
+== 0.4.0 / 2012-04-04
+
+Enhancements
+- Compatibility with Ruby 1.8.7 [issue #2]
+- Showing logging configuration is now optional
+
+Bug Fixes
+- Update "logging" depedency to any 1.X gem release
+
+== 0.3.0 / 2011-09-19
+
+Enhancements
+- Appending default "log_to" destinations to the configuration files
+- Remove the LogTail middleware if present
+- Removing the Rails version check
+
+== 0.2.0 / 2011-09-16
+
+Enhancements
+- Using the ActionMailer smtp settings
+- Sanity checks for Rails and Rails.version
+- Handling difference in "config.paths" between Rails 3.0 and Rails 3.1
+
+== 0.1.0 / 2011-09-16
+
+Enhancements
+- Birthday!

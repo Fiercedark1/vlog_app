@@ -1,0 +1,12 @@
+Description:
+    Generates the configuration file used by the Logging framework.
+
+Example:
+    rails generate logging:install
+
+    This will create:
+        config/logging.rb
+
+    And it will append "log_to" destinations to:
+        config/environments/development.rb
+        config/environments/production.rb

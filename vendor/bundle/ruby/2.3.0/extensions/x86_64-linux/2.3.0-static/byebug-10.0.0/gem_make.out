@@ -1,0 +1,19 @@
+current directory: /vlog_app/vendor/bundle/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+/home/ubuntu/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20180216-23526-1y2vzm4.rb extconf.rb
+creating Makefile
+
+current directory: /vlog_app/vendor/bundle/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /vlog_app/vendor/bundle/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR="
+compiling context.c
+compiling locker.c
+compiling byebug.c
+compiling threads.c
+compiling breakpoint.c
+linking shared-object byebug/byebug.so
+
+current directory: /vlog_app/vendor/bundle/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180216-23526-zcw53y/byebug

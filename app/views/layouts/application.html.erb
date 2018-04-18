@@ -22,6 +22,7 @@
           <li><a href="<%= posts_path %>"><i class="small material-icons ">library_books</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
+          <li><a href="<%= ytapi_index_path %>"><i class="small material-icons">filter_list</i></a></li>
           <% if user_signed_in? %>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <li><%= link_to('Account', edit_user_registration_path) %></li>
@@ -37,6 +38,7 @@
           <li><a href="<%= posts_path %>"><i class="small material-icons ">library_books</i></a></li>
           <li><a href="<%= pages_about_path %>"><i class="small material-icons">perm_identity</i></a></li>
           <li><a href="<%= pages_contact_path %>"><i class="small material-icons">email</i></a></li>
+          <li><a href="<%= ytapi_index_path %>"><i class="small material-icons">filter_list</i></a></li>
           <% if user_signed_in? %>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <li><%= link_to('Account', edit_user_registration_path) %></li>

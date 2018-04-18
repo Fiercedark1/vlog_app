@@ -1,14 +1,17 @@
 source 'https://rubygems.org'
 
-
+# google api
+gem 'google-api-client'
+# Youtube gem
+gem 'video_info'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.2'
 # Use SCSS for stylesheets
-gem 'sass-rails' 
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # Form Generation
@@ -19,9 +22,9 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'sdoc', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -31,9 +34,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'byebug'
 gem 'spring'
-gem 'web-console', '~> 2.0'
+gem 'web-console'
 #devise
-gem 'devise', '~> 3.5.6'
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :production do
@@ -41,13 +44,12 @@ group :production do
   gem 'rails_12factor'
   gem 'ddtrace'
 end
-#group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-#  gem 'byebug'
-  # Use sqlite3 as the database for Active Record
-  #gem 'sqlite3'
-#  gem 'pg', '~> 0.20'
-#end
+group :development, :test do
+  gem 'byebug'
+  gem 'rails_12factor'
+  gem 'sqlite3'
+  gem 'ddtrace'
+end
 
 #group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

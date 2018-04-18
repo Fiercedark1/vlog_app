@@ -1,0 +1,36 @@
+<h1>API Data Youtube Videos</h1>
+
+<div class="col s12 m7">
+    <h2 class="header"><%= @ytapi_video_1.title %></h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="<%= @ytapi_video_1.thumbnail_medium %>">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><%= @ytapi_video_1.description %></p>
+        </div>
+        <div class="card-action">
+          <a href="<%= @ytapi_video_1.embed_url %>">Link to Video</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="col s12 m7">
+    <h2 class="header"><%= @ytapi_video_2.title %></h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="<%= @ytapi_video_2.thumbnail_medium %>">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p><%= @ytapi_video_2.description %></p>
+        </div>
+        <div class="card-action">
+          <a href="<%= @ytapi_video_2.embed_url %>">Link to Video</a>
+        </div>
+      </div>
+    </div>
+  </div>

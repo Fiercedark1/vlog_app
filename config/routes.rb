@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :videos
+  resources :ytapi
   resources :posts do
     resources :comments
   end
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+
+  get 'ytapi/index'  => 'ytapi/#index'
 
   get 'videos/index' => 'videos/#index'
 

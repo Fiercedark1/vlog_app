@@ -27,3 +27,13 @@ Things you may want to cover:
 - Finally I would review the first video on the site "Using Youtube iframes" and if you want to dynamically use something else look at <tt>/app/views/videos/show.html.erb</tt> line 14 <tt>@video.wistia</tt> is your variable that represents the link from where ever your videos reside
 Please feel free to use a diddfferent markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Development
+> Has been tested on Ubuntu and OSX
+
+There is a docker-compose.yaml file that has the instructions on how to deploy a postgresql DB container with the proper authentication and ports.
+
+Deployment on development environment mode of vlog_app.
+1. `docker-compose up --build -d` **build the postgresql db docker container**
+2. `cd vlog_app/` **Change directory into the vlog_app**
+3. `rails server -b 127.0.0.1 -p 3000` **Run the application**

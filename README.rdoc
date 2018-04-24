@@ -30,9 +30,9 @@ Please feel free to use a diddfferent markup language if you do not plan to run
 
 # Development
 
-> Has been tested on Ubuntu and OSX
-
 There is a docker-compose.yaml file that has the instructions on how to deploy a postgresql DB container with the proper authentication and ports.
+
+> Has been tested on Ubuntu and OSX
 
 Deployment on development environment mode of vlog_app.
 1. `docker-compose up --build -d` **build the postgresql db docker container**
